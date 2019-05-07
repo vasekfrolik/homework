@@ -11,17 +11,17 @@ const INITIAL_STATE = {
     id: 1,
     name: "john",
     surname: "doe",
-    jobPosition: "",
-    dateOfBirth: "18/02/1999",
-    isGone: false
+    jobPosition: "full-stack developer",
+    dateOfBirth: "2019-05-26T22:00:00.000Z",
+    isEmployed: true
   },
   2: {
     id: 2,
     name: "mike",
     surname: "black",
-    jobPosition: "",
-    dateOfBirth: "08/01/1998",
-    isGone: false
+    jobPosition: "full-stack developer",
+    dateOfBirth: "2019-05-26T22:00:00.000Z",
+    isEmployed: false
   }
 };
 

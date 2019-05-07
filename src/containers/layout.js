@@ -1,15 +1,12 @@
 import React from "react";
 import "./layout.scss";
-import Logo from "../components/logo";
-import SideNavigation from "./side_navigation";
-import MainArea from "./main_area";
+
+import EmployeeList from "./employees_list";
 
 function Layout() {
   return (
     <div className="App">
-      <Logo />
-      <SideNavigation />
-      <MainArea />
+      <EmployeeList />
     </div>
   );
 }

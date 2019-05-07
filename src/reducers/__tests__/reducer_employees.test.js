@@ -52,7 +52,7 @@ it("handles actions of type DELETE_EMPLOYEEE_BY_ID", () => {
       surname: "doe",
       jobPosition: "",
       dateOfBirth: "18/02/1999",
-      isGone: false
+      isEmployed: true
     },
     2: {
       id: 2,
@@ -60,7 +60,7 @@ it("handles actions of type DELETE_EMPLOYEEE_BY_ID", () => {
       surname: "black",
       jobPosition: "",
       dateOfBirth: "08/01/1998",
-      isGone: false
+      isEmployed: false
     }
   };
   const action = {

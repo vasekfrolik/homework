@@ -1,6 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.scss";
+import "./styles/_font_icons.scss";
+import "./styles/_animations.scss";
 import Layout from "./containers/layout";
 import * as serviceWorker from "./serviceWorker";
 

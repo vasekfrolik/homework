@@ -13,10 +13,14 @@
 }
 
 .logo {
-  height: 100px;
-  width: 100px;
+  height: 32px;
+  width: 24px;
   transform: scale(0, 0);
   animation: enlarge 0.5s ease-in forwards;
+  display: inline-block;
+  margin-left: 20px;
+  margin-right: 10px;
+  margin-top: 5px;
 }
 
 .logo #red,
