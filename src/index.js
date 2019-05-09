@@ -1,16 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.scss";
+import "./styles/_global.scss";
 import "./styles/_font_icons.scss";
 import "./styles/_animations.scss";
-import Layout from "./containers/layout";
+import "./styles/_overwritten.scss";
+import EmployeesList from "./containers/employees_list";
 import * as serviceWorker from "./serviceWorker";
 
 import Root from "./root";
 
 ReactDOM.render(
   <Root>
-    <Layout />
+    <EmployeesList />
   </Root>,
   document.getElementById("root")
 );

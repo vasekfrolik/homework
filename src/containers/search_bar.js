@@ -1,26 +1,11 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { setSearchTerm } from "../actions/ui";
-import { withRouter } from "react-router-dom";
 import { bindActionCreators } from "redux";
-import _ from "lodash";
 import { DebounceInput } from "react-debounce-input";
 import "./search_bar.scss";
 
 class SearchBar extends Component {
-  constructor(props) {
-    super(props);
-    this.clearSearchTerm = this.clearSearchTerm.bind(this);
-  }
-
-  setSearchTerm(event) {
-    this.props.setSearchTerm(event.target.value);
-  }
-
-  clearSearchTerm() {
-    this.props.setSearchTerm("");
-  }
-
   render() {
     var buttonDisplayedStyle = "";
     var inputStyle = "search-box-input";
@@ -36,23 +21,22 @@ class SearchBar extends Component {
         <div className="search-bar">
           <DebounceInput
             className={inputStyle}
-            placeholder="Search"
+            placeholder={this.props.ui.textsEn.SEARCH}
             minLength={1}
             debounceTimeout={200}
             value={this.props.ui.searchTerm}
-            onChange={this.setSearchTerm.bind(this)}
+            onChange={event => this.props.setSearchTerm(event.target.value)}
             id="searchBar"
           />
 
           <div />
         </div>
-        <a
-          href="#"
+        <button
           className={buttonDisplayedStyle}
-          onClick={this.clearSearchTerm.bind(this)}
+          onClick={() => this.props.setSearchTerm("")}
         >
-          Clear search term
-        </a>
+          {this.props.ui.textsEn.CLEAR_SEARCH}
+        </button>
       </div>
     );
   }
@@ -73,9 +57,7 @@ function mapDispatchToProps(dispatch) {
   );
 }
 
-export default withRouter(
-  connect(
-    mapStateToProps,
-    mapDispatchToProps
-  )(SearchBar)
-);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(SearchBar);

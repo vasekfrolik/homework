@@ -1,13 +1,16 @@
-import _ from "lodash";
-import { SELECT_EMPLOYEE } from "../actions/employees";
+import selectedEmployeeReducer from "../reducer_selected_employee";
+import { SELECT_EMPLOYEE } from "../../actions/employees";
 
-const INITIAL_STATE = {};
+it("handles actions of type FETCH_JOB_POSITIONS", () => {
+  const action = {
+    type: SELECT_EMPLOYEE,
+    payload: "1"
+  };
+  const newState = selectedEmployeeReducer([], action);
+  expect(newState).toEqual("1");
+});
 
-export default function(state = INITIAL_STATE, action) {
-  switch (action.type) {
-    case SELECT_EMPLOYEE:
-      return action.payload;
-    default:
-      return state;
-  }
-}
+it("handles actions with unknown type", () => {
+  const newState = selectedEmployeeReducer([], { type: "UNKNOWN" });
+  expect(newState).toEqual([]);
+});

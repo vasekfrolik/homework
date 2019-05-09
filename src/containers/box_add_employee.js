@@ -5,13 +5,13 @@ import { withRouter } from "react-router-dom";
 import { bindActionCreators } from "redux";
 import _ from "lodash";
 import Input from "../components/input";
-import "./button_add_employee.scss";
+import "./box_add_employee.scss";
 import uuid from "uuid";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import CheckboxSwitch from "../components/checkbox_switch";
 
-class ButtonAddEmployee extends Component {
+class BoxAddEmployee extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -25,8 +25,7 @@ class ButtonAddEmployee extends Component {
     this.addNewEmployee = this.addNewEmployee.bind(this);
   }
 
-  addNewEmployee() {
-    this.props.addEmployee(this.state);
+  resetStateData() {
     this.setState({
       id: uuid.v4(),
       name: "",
@@ -35,6 +34,11 @@ class ButtonAddEmployee extends Component {
       dateOfBirth: new Date(),
       isEmployed: false
     });
+  }
+
+  addNewEmployee() {
+    this.props.addEmployee(this.state);
+    this.resetStateData();
   }
 
   getJobPositions() {
@@ -51,9 +55,11 @@ class ButtonAddEmployee extends Component {
   renderAddNewEmployeeForm() {
     return (
       <div className="form top-layer">
-        <div className="form-caption">Add a new employee</div>
+        <div className="form-caption">
+          {this.props.ui.textsEn.ADD_EMPLOYEE_TITLE}
+        </div>
         <Input
-          label="Name"
+          label={this.props.ui.textsEn.NAME}
           key="keyName"
           customClass="input-standard "
           value={this.state.name}
@@ -61,7 +67,7 @@ class ButtonAddEmployee extends Component {
         />
 
         <Input
-          label="Surname"
+          label={this.props.ui.textsEn.SURNAME}
           key="keySurname"
           customClass="input-standard "
           value={this.state.surname}
@@ -69,7 +75,7 @@ class ButtonAddEmployee extends Component {
         />
 
         <div className="employee-box-row">
-          <div>Position:</div>
+          <div>{this.props.ui.textsEn.POSITION}:</div>
           <select
             key="keyJobPosition"
             className="input-standard"
@@ -82,11 +88,10 @@ class ButtonAddEmployee extends Component {
           </select>
         </div>
         <div className="employee-box-row">
-          <div>Born:</div>
+          <div>{this.props.ui.textsEn.BORN}:</div>
           <DatePicker
             key="keyDateOfBirth"
             className="input-standard"
-            locale="cs-CZ"
             onChange={event =>
               this.setState({ dateOfBirth: event }, () =>
                 console.log(event, this.state.dateOfBirth)
@@ -98,7 +103,7 @@ class ButtonAddEmployee extends Component {
 
         <CheckboxSwitch
           key="keyIsEmployed  "
-          label="Employed"
+          label={this.props.ui.textsEn.EMPLOYED}
           checked={this.state.isEmployed}
           onChange={event =>
             this.setState({ isEmployed: event.target.checked })
@@ -112,7 +117,7 @@ class ButtonAddEmployee extends Component {
             onClick={this.addNewEmployee}
           >
             <i className="icon-PlusCircle16" />
-            Add new employee
+            {this.props.ui.textsEn.ADD_NEW_EMPLOYEE}
           </button>
         </div>
       </div>
@@ -148,5 +153,5 @@ export default withRouter(
   connect(
     mapStateToProps,
     mapDispatchToProps
-  )(ButtonAddEmployee)
+  )(BoxAddEmployee)
 );

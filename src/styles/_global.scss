@@ -48,7 +48,7 @@ body,
   height: 100%;
 }
 
-a {
+button {
   font-size: 13px;
   text-decoration: none;
   background: transparent;
@@ -56,9 +56,11 @@ a {
   padding: 3px 0px 4px 10px;
   vertical-align: middle;
   border-radius: 2px;
+  border: 0;
+  cursor: pointer;
 }
 
-a:hover {
+button:hover {
   color: darken(lightseagreen, 10);
 }
 
@@ -68,10 +70,13 @@ select {
   appearance: none;
 }
 
-.message {
-  padding-top: 50px;
+.flex-stretch {
+  display: flex;
+  align-content: stretch;
+  flex-grow: 1;
+  position: relative;
 }
 
-.react-datepicker-popper {
-  z-index: 5 !important;
+.top-layer {
+  z-index: 1;
 }

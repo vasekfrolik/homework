@@ -2,14 +2,15 @@ import React from "react";
 import { Provider } from "react-redux";
 import { Router } from "react-router-dom";
 import reducers from "./reducers";
-import createHashHistory from "history/createHashHistory";
+import { createBrowserHistory } from "history";
 import ErrorBoundary from "./containers/error_boundary";
 import ReduxPromise from "redux-promise";
 import { createStore, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 
 export default props => {
-  const history = createHashHistory();
+  const history = createBrowserHistory();
+
   const store = applyMiddleware(ReduxPromise, thunk)(createStore);
 
   return (

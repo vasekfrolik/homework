@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render CheckboxSwitch matches snapshot 1`] = `ShallowWrapper {}`;
+
+exports[`render Message box matches snapshot 1`] = `ShallowWrapper {}`;

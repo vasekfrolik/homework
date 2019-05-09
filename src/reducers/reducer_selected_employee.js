@@ -1,4 +1,3 @@
-import _ from "lodash";
 import { SELECT_EMPLOYEE } from "../actions/employees";
 
 const INITIAL_STATE = null;

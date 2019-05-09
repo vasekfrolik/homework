@@ -16,6 +16,12 @@ describe("add employee", () => {
     const action = addEmployee();
     expect(action.type).toEqual(ADD_EMPLOYEE);
   });
+
+  it("has the correct payload", () => {
+    const employeeData = { id: "1a", name: "John", surname: "Doe" };
+    const action = addEmployee(employeeData);
+    expect(action.payload).toEqual(employeeData);
+  });
 });
 
 describe("update employee property", () => {
@@ -45,3 +51,5 @@ describe("select employeee", () => {
     expect(action.type).toEqual(SELECT_EMPLOYEE);
   });
 });
+
+// TODO write additional tests to check correct payload

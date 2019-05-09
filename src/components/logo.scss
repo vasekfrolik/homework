@@ -1,17 +1,3 @@
-@keyframes enlarge {
-  0% {
-    transform: scale(0, 0);
-  }
-
-  60% {
-    transform: scale(1.2, 1.2);
-  }
-
-  100% {
-    transform: scale(1, 1);
-  }
-}
-
 .logo {
   height: 32px;
   width: 24px;
@@ -21,28 +7,4 @@
   margin-left: 20px;
   margin-right: 10px;
   margin-top: 5px;
-}
-
-.logo #red,
-.logo #gray,
-.logo #grayDark {
-  fill: rgba(0, 0, 0, 0.1);
-  transition: 0.3s fill;
-}
-
-.logo:hover #red {
-  fill: red;
-  transition: 0.3s fill;
-}
-
-.logo:hover #gray {
-  fill: #9c9b9b;
-  transition: 0.3s fill;
-  transition-delay: 0.2s;
-}
-
-.logo:hover #grayDark {
-  fill: #575756;
-  transition: 0.3s fill;
-  transition-delay: 0.4s;
 }

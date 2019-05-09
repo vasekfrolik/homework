@@ -7,19 +7,19 @@ import {
 } from "../actions/employees";
 
 const INITIAL_STATE = {
-  1: {
-    id: 1,
+  "1a": {
+    id: "1a",
     name: "john",
     surname: "doe",
     jobPosition: "full-stack developer",
     dateOfBirth: "2019-05-26T22:00:00.000Z",
     isEmployed: true
   },
-  2: {
-    id: 2,
+  "2a": {
+    id: "2a",
     name: "mike",
     surname: "black",
-    jobPosition: "full-stack developer",
+    jobPosition: "sw admin",
     dateOfBirth: "2019-05-26T22:00:00.000Z",
     isEmployed: false
   }

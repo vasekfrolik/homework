@@ -14,7 +14,7 @@ it("handles actions of type ADD_EMPLOYEEE", () => {
     surname: "doe",
     jobPosition: "",
     dateOfBirth: "18/02/1999",
-    isGone: false
+    isEmployed: false
   };
   const action = {
     type: ADD_EMPLOYEE,
@@ -77,7 +77,7 @@ it("handles actions of type DELETE_EMPLOYEEE_BY_ID", () => {
       surname: "doe",
       jobPosition: "",
       dateOfBirth: "18/02/1999",
-      isGone: false
+      isEmployed: true
     }
   });
   console.log(newState);

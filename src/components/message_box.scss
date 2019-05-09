@@ -1,0 +1,19 @@
+.message-error {
+  width: 80%;
+  background: linear-gradient(45deg, red, lighten(red, 20));
+  margin: auto;
+  margin-top: 100px;
+  color: rgba(255, 255, 255, 1);
+  border: 6px solid red;
+  border-radius: 6px;
+  text-align: center;
+  padding: 30px 20px 50px 20px;
+  box-shadow: 0 0 5px -3px #333;
+}
+.message {
+  padding-top: 10px;
+}
+
+.message-error .message {
+  text-shadow: 0 0 2px #333;
+}

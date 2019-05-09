@@ -41,18 +41,18 @@
   border: 0;
   padding: 4px;
   font-size: 18px;
-  width: 100px;
+  width: 80px;
   border-bottom: 2px solid transparent;
   transition: all 0.3s ease-in;
 }
 
 .search-box-input-non-empty {
-  width: 350px;
+  width: 250px;
   border-bottom: 2px solid lightseagreen;
 }
 
 .search-box-input:focus {
-  width: 350px;
+  width: 250px;
   border-bottom: 2px solid lightseagreen;
   transition: all 0.3s ease-in;
 }

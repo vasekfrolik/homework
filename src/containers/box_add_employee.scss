@@ -11,7 +11,7 @@
   margin-bottom: 10px;
 }
 
-.button-default {
+button.button-default {
   padding: 6px 10px;
   border-radius: 2px;
   color: #fff;
@@ -47,6 +47,7 @@
   box-shadow: 0 0 8px -3px #ccc;
   border-radius: 4px;
   transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
   margin-top: 100px;
   z-index: 5;
 }

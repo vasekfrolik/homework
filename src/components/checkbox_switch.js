@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import "./checkbox_switch.scss";
+import PropTypes from "prop-types";
 export default class CheckboxSwitch extends Component {
   render() {
     return (
       <div className="employee-box-row">
-        <div>{this.props.label}:</div>
+        <div className="im-switch-label">{this.props.label}:</div>
         <div className="im-switch-with-value">
           <label className="im-switch">
             <input
@@ -22,3 +23,15 @@ export default class CheckboxSwitch extends Component {
     );
   }
 }
+
+CheckboxSwitch.propTypes = {
+  checked: PropTypes.bool.isRequired,
+  label: PropTypes.string,
+  onChange: PropTypes.func.isRequired
+};
+
+CheckboxSwitch.defaultProps = {
+  label: "",
+  checked: true,
+  onChange: null
+};
