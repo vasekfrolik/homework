@@ -1,9 +1,9 @@
-import mockAxios from "axios";
+//import mockAxios from "axios";
 import {
-  FETCH_JOB_POSITIONS,
   FETCH_JOB_POSITIONS_SUCCESS,
-  fetchJobPositions,
   fetchJobPositionsSuccess
+  //FETCH_JOB_POSITIONS,
+  //fetchJobPositions,
 } from "../job_positions";
 
 describe("fetch job positions", () => {

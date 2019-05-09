@@ -3,7 +3,6 @@ import { mount } from "enzyme";
 import { DebounceInput } from "react-debounce-input";
 
 import SearchBar from "./../search_bar";
-
 import Root from "./../../root";
 
 let wrapper;

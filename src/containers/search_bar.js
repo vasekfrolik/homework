@@ -26,12 +26,13 @@ class SearchBar extends Component {
             debounceTimeout={200}
             value={this.props.ui.searchTerm}
             onChange={event => this.props.setSearchTerm(event.target.value)}
-            id="searchBar"
+            id="searchBarInput"
           />
 
           <div />
         </div>
         <button
+          id="button-clear-search"
           className={buttonDisplayedStyle}
           onClick={() => this.props.setSearchTerm("")}
         >

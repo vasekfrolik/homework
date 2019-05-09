@@ -1,5 +1,5 @@
 import React from "react";
-import { mount, shallow } from "enzyme";
+import { mount } from "enzyme";
 
 import Header from "./../header";
 import Logo from "./../../components/logo";
@@ -16,7 +16,7 @@ beforeEach(() => {
   );
 });
 
-describe("render header", () => {
+describe("render Header", () => {
   it("has one Logo", () => {
     expect(wrapper.find(Logo).length).toEqual(1);
   });

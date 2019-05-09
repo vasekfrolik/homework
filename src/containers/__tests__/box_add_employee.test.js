@@ -28,11 +28,4 @@ describe("render BoxAddEmployee", () => {
   it("has one DatePicker elements", () => {
     expect(wrapper.find(DatePicker).length).toEqual(1);
   });
-  /*
-  it("has been called once", () => {
-    wrapper.instance().getJobPositions = jest.fn();
-    wrapper.instance().getJobPositions();
-    expect(wrapper.instance().getJobPositions).toHaveBeenCalledTimes(1);
-  });
-  */
 });

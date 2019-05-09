@@ -22,13 +22,3 @@ export function fetchJobPositions() {
       });
   };
 }
-
-/* 
-export function fetchJobPositions() {
-  const response = axios.get("http://ibillboard.com/api/positions");
-  return {
-    type: FETCH_JOB_POSITIONS,
-    payload: response
-  };
-}
-*/

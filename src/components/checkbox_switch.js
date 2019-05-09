@@ -27,7 +27,7 @@ export default class CheckboxSwitch extends Component {
 CheckboxSwitch.propTypes = {
   checked: PropTypes.bool.isRequired,
   label: PropTypes.string,
-  onChange: PropTypes.func.isRequired
+  onChange: PropTypes.func
 };
 
 CheckboxSwitch.defaultProps = {
